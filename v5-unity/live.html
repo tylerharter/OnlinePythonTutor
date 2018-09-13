@@ -24,33 +24,6 @@
 
 <body>
 
-  <div id="liveModeHeader">
-
-  This is the live programming mode (<a href="https://www.youtube.com/watch?v=JjGt95Te0wo" target="_blank">video intro</a>), which
-  continually runs and visualizes your code as you type. It's
-  <span style="font-weight: bold; color: #e93f34;">highly experimental</span>
-  and does not yet support all languages and
-  features of the <a href="visualize.html" target="_blank">regular
-  Python Tutor visualizer</a>.
-
-  <span id="surveyPane"></span>
-
-  <!-- taken down on 2016-12-06
-  <p>Help us improve this live programming mode by filling out this <a
-  target="_blank"
-  href="https://docs.google.com/forms/d/1XT-rPaWxDRNOPAfBxIqzCXs7nYGUgOjNofmUnuQZYV8/viewform">two-question
-  survey</a>.</p>
-  -->
-
-  </div>
-
-<table id="experimentalHeader">
-<tr>
-<td valign="top" id="headerTdLeft"></td>
-<td valign="top" id="headerTdRight"></td>
-</tr>
-</table>
-
   <table>
     <tr>
       <td valign="top">
@@ -89,58 +62,12 @@
 
           <div id="frontendErrorOutput"></div>
         </div>
-        <div id="eurekaSurveyPane"></div>
       </td>
       <td valign="top">
         <div id="pyOutputPane"/>
       </td>
     </tr>
   </table>
-
-<div id="footer">
-
-<div id="optionsPane">
-  <select id="cumulativeModeSelector">
-    <option value="false">hide exited frames [default]</option>
-    <option value="true">show exited frames (Python)</option>
-    <!-- <option value="holistic">holistic mode (experimental)</option> -->
-  </select>
-  <select id="heapPrimitivesSelector">
-    <option value="false">inline primitives and try to nest objects</option>
-    <option value="nevernest" selected>inline primitives but don't nest objects [default]</option>
-    <option value="true">render all objects on the heap (Python)</option>
-  </select>
-  <select id="textualMemoryLabelsSelector">
-    <option value="false">draw pointers as arrows [default]</option>
-    <option value="true">use text labels for pointers</option>
-  </select>
-</div>
-
-<p>
-  <button id="genUrlBtn" class="smallBtn" type="button">Generate permanent link</button> <input type="text" id="urlOutput" size="70"/>
-</p>
-<p>
-  <button id="genUrlShortenedBtn" class="smallBtn" type="button">Generate shortened link</button> <input type="text" id="urlOutputShortened" size="25"/>
-</p>
-
-
-<p>Click the button above to create a permanent link to your
-visualization (<a href="https://www.youtube.com/watch?v=h4q3UKdEFKE" target="_blank">video demo</a>). To report a bug, paste the link along with a brief error
-description in an email addressed to philip@pgbovine.net</p>
-
-<p style="margin-top: 35px;">
-This live programming mode of
-<a href="http://pythontutor.com/">Python Tutor</a> (<a href="https://github.com/pgbovine/OnlinePythonTutor">code on GitHub</a>) supports three
-languages: Python <a href="https://docs.python.org/2.7/">2.7</a> and <a
-href="https://docs.python.org/3.6/">3.6</a> with limited module
-imports, and
-JavaScript running in Node.js v6.0.0 with limited support for ES6.
-
-Try the regular
-<a href="http://pythontutor.com/visualize.html">Python Tutor</a>
-visualizer for additional language support.</p>
-
-</div>
 
 </body>
 </html>

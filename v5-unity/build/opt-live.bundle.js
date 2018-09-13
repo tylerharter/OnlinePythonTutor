@@ -3321,7 +3321,7 @@ var ProgramOutputBox = /** @class */ (function () {
         this.domRoot = domRoot;
         var outputsHTML = '<div id="progOutputs">\
          <div id="printOutputDocs">Print output (drag lower right corner to resize)</div>\n\
-         <textarea id="pyStdout" cols="40" rows="5" wrap="off" readonly></textarea>\
+         <textarea id="pyStdout" cols="40" rows="20" wrap="off" readonly style="font-family: monospace;"></textarea>\
        </div>';
         this.domRoot.append(outputsHTML);
         // go backwards from the end ... sometimes the final entry doesn't
