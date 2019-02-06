@@ -22542,7 +22542,8 @@ var AbstractBaseFrontend = /** @class */ (function () {
     };
     // execute code and call the execCallback function when the server
     // returns data via Ajax
-    AbstractBaseFrontend.prototype.executeCodeAndRunCallback = function (codeToExec, pyState, backendOptionsObj, frontendOptionsObj, execCallback) {
+  AbstractBaseFrontend.prototype.executeCodeAndRunCallback = function (codeToExec, pyState, backendOptionsObj, frontendOptionsObj, execCallback) {
+    codeToExec = "y = 3\nz = y + 2";
         var _this = this;
         var callbackWrapper = function (dataFromBackend) {
             _this.clearFrontendError(); // clear old errors first; execCallback may put in a new error:

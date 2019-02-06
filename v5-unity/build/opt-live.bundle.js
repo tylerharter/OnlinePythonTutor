@@ -26718,7 +26718,77 @@ var OptLiveFrontend = /** @class */ (function (_super) {
     // opt-frontend-common.ts?
     OptLiveFrontend.prototype.executeCodeAndCreateViz = function (codeToExec, pyState, backendOptionsObj, frontendOptionsObj, outputDiv) {
         var _this = this;
-        var execCallback = function (dataFromBackend) {
+      var execCallback = function (dataFromBackend) {
+        console.log(dataFromBackend);
+        dataFromBackend = {
+          "code": "x = [1,2,3]\ny = x\n",
+          "trace": [
+            {
+              "line": 1,
+              "event": "step_line",
+              "func_name": "<module>",
+              "globals": {},
+              "ordered_globals": [],
+              "stack_to_render": [],
+              "heap": {},
+              "stdout": ""
+            },
+            {
+              "line": 2,
+              "event": "step_line",
+              "func_name": "<module>",
+              "globals": {
+                "x": [
+                  "REF",
+                  1
+                ]
+              },
+              "ordered_globals": [
+                "x"
+              ],
+              "stack_to_render": [],
+              "heap": {
+                "1": [
+                  "LIST",
+                  1,
+                  2,
+                  3
+                ]
+              },
+              "stdout": ""
+            },
+            {
+              "line": 2,
+              "event": "return",
+              "func_name": "<module>",
+              "globals": {
+                "x": [
+                  "REF",
+                  1
+                ],
+                "y": [
+                  "REF",
+                  1
+                ]
+              },
+              "ordered_globals": [
+                "x",
+                "y"
+              ],
+              "stack_to_render": [],
+              "heap": {
+                "1": [
+                  "LIST",
+                  1,
+                  2,
+                  3
+                ]
+              },
+              "stdout": ""
+            }
+          ]
+        };
+        
             var trace = dataFromBackend.trace;
             if (!trace ||
                 (trace.length === 0) ||
